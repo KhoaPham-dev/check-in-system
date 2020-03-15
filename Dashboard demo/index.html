@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dashboard</title>
+        <meta charset="utf-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>	
+    </head>
+    <body>
+        <div id='container'>
+            <div id='user-name'></div>
+           <button id="checkin-webcam">WEBCAM</button>
+           <button id="checkin-input">INPUT</button>
+        </div>
+        <button id="logout">logout</button>
+        <form id="uploadForm" method="POST" action="https://script.google.com/macros/s/AKfycbyUVRbCtZS6x3Cjc08p5-maMpP1nhGvPh9RHaP86HPZHWQj2xI/exec">
+            <input type="hidden" value="" name="fileContent" id="fileContent">
+            <input type="hidden" value="" name="filename" id="filename">
+            <input type="hidden" value="" name="username" id="username">
+            <input type="hidden" value="" name="numOfFiles" id="numOfFiles">
+            <input type="hidden" value="" name="useremail" id="useremail">
+            <input type="hidden" value="" name="password" id="password">
+        </form>
+            <div class="show-files">
+                <p>Uploaded files:</p>
+                <select id="list-uploaded-files">
+                    
+                  </select>
+            </div>
+            <input type="file" name="attach" id="attach" required/>
+            <input type="button" value="Submit" id="submit-button"/>
+            <p id="link"></p>
+
+        <script  src="https://www.gstatic.com/firebasejs/7.3.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-firestore.js"></script>
+        <script>
+        // Your web app's Firebase configuration
+            var firebaseConfig = {
+            apiKey: "AIzaSyD_nuTmYNsDkKPLAi6S43QIPzLWTlBYlN4",
+            authDomain: "check-in-system-81cda.firebaseapp.com",
+            databaseURL: "https://check-in-system-81cda.firebaseio.com",
+            projectId: "check-in-system-81cda",
+            storageBucket: "check-in-system-81cda.appspot.com",
+            messagingSenderId: "527458424982",
+            appId: "1:527458424982:web:733509cd0abda2ee940ab7"
+            };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        var db = firebase.firestore();
+        </script>
+        <script src="./index.js"></script>
+        <script src="./uploadExcelToDrive.js"></script>
+    </body>
+</html>

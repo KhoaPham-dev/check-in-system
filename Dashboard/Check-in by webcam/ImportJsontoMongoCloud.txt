@@ -1,0 +1,1 @@
+mongoimport --host Cluster0-shard-0/cluster0-shard-00-00-bhclh.mongodb.net:27017 --ssl --username DemoCheckingIn --password haivl.com --authenticationDatabase admin --db demo_checking --collection imformation_guests --type json --file C:\Users\super\Desktop\testchecking.json

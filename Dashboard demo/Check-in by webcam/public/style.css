@@ -1,0 +1,55 @@
+body{
+	background-image: url(./background.jpg);
+}
+
+.main{ 
+	font-family: 'Helvetica', serif; 
+	opacity: 0.9;
+	border-radius: 5px;
+	margin-left: -25px;
+} 
+
+.sub{
+	font-family: 'Helvetica', serif; 
+	background-color: rgba(0, 0, 0, 0.788);
+	opacity: 0.8;
+	border-radius: 7px;
+	text-align: center;
+	height: 400px;
+	margin-left: -15px;
+}
+.main h1{ 
+	font-size: 40px; 
+	text-align:center; 
+	font-family: 'Helvetica', serif; 
+	color: rgb(5, 5, 5);
+
+} 
+
+ul{
+	list-style-type: none;
+	color: white;
+	text-align: left;
+	font-size: 20px;
+	margin-left: -25px;
+}
+/*responsive*/
+@media only screen and (max-width: 1200px) and (min-width: 1000px){
+	.sub{
+		margin-left: 90px;
+		width: 210px;
+	}
+  }
+  @media only screen and (max-width: 1001px){
+	.sub{
+		width: 650px;
+		height: 200px
+	}
+  }
+img{
+	width: 240px;
+	height: 280px;
+}
+h1{
+	font-size: 50px;
+}

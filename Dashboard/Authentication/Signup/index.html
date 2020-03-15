@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+        <title>Sign up</title>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+</head>
+<body>
+    <div id="login_div" class="main-div">
+    <h3>Sign up</h3>
+    <form id="signup-form">
+        <input type="text" placeholder="Username" id="username_field" required/>
+        <input type="email" placeholder="Email..." id="email_field" required/>
+        <input type="password" placeholder="Password..." id="password_field" required/>
+        <button type="submit" id="signup-button">Sign up!</button>
+    </form>
+    <a href="../Login-logout/index.html"><button class="login">Login</button></a>
+    </div>
+        
+
+  <script  src="https://www.gstatic.com/firebasejs/7.3.0/firebase-app.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-firestore.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+    var firebaseConfig = {
+    apiKey: "AIzaSyD_nuTmYNsDkKPLAi6S43QIPzLWTlBYlN4",
+    authDomain: "check-in-system-81cda.firebaseapp.com",
+    databaseURL: "https://check-in-system-81cda.firebaseio.com",
+    projectId: "check-in-system-81cda",
+    storageBucket: "check-in-system-81cda.appspot.com",
+    messagingSenderId: "527458424982",
+    appId: "1:527458424982:web:733509cd0abda2ee940ab7"
+    };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  var db = firebase.firestore();
+  const auth = firebase.auth();
+</script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="./index.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>Avatar</title>
+<style>
+    img{
+        height: 100%;
+        width: 100%;
+    }
+    #show-avatar{
+       width: 100%;
+    }
+</style>
+    </head>
+    <body>
+        <div id="show-avatar">
+
+        </div>
+        <!-- JQuery -->
+  <script type="text/javascript" src="./js/jquery-3.4.1.min.js"></script>
+        <script>
+            var script_url = "https://script.google.com/macros/s/AKfycbyOacY4gauy7BYvdobMm1ophiuc_Pj99qA97OCJXbmPtW6wufg/exec";
+            // Make an AJAX call to Google Script
+
+            function update_avatar(){
+                
+                var url = script_url+"?callback=ctrlq&currentLr="+currentLastRow;
+            
+                var request = jQuery.ajax({
+                crossDomain: true,
+                url: url ,
+                method: "GET",
+                dataType: "jsonp"
+                });
+
+            }
+                var currentAvatar="";
+                var currentLastRow="";
+            // print the returned data
+            function ctrlq(e) {
+                if(e.responseStatus){
+                    if(e.avatar != currentAvatar){
+                        $("#show-avatar").html(`<img src="${e.avatar}">`); 
+                        currentAvatar = e.avatar;
+                        currentLastRow = e.currentLr;
+                    }
+                }
+                 
+            }
+            window.setInterval(function(){
+                update_avatar();
+            }, 1000)
+        </script>
+    </body>
+</html>
